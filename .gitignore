@@ -1,0 +1,6 @@
+yelp_academic_dataset_user.json
+yelp_new_features.csv
+yelp_review_num_reviews_before_user_review.csv
+yelp_review.csv
+yelp_user.csv
+*.DS_Store
