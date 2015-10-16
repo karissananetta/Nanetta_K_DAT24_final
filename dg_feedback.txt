@@ -1,0 +1,32 @@
+SLIDES:
+
+Not sure you need a slide about feature engineering? Or maybe first need explanation for why you needed to create these features (i.e why your baseline model was insufficient). But in general I think this sort of thing can be explained in comments in the code.
+
+I think your “The Process” slide should come after the “What’s in the data?” slide. 
+
+How do your clusters relate to your stated goal of identifying trendsetters? Why isn’t “Trendsetter” a cluster?
+
+NOTEBOOK 1:
+
+I couldn’t open your original ‘yelp_academic_dataset_user.json’ file in your data munging notebook, so I didn’t run any of your code. It doesn’t look like you uploaded it to Git (maybe this was one of those massive files you mentioned in class?)
+
+When creating your ‘total_compliment’ column, a quicker way to sum those columns rather than writing out each column name could have been:
+
+data_user_copy[‘total_compliment’] = data_user_copy.columns(a:z).sum() #I don’t know the index of the columns so using (a:z) as placeholders for index numbers
+
+At the top of your notebook you designate trendsetters as people who give 4 stars to a business. But then in your data vis (which is great!) you show that there is a skew towards high ratings— people generally only like to review, and review well, the things they like. Maybe this comes later, but at this point it is unclear why you have labeled reviewers who give at least 4 stars trendsetters, because it seems that the majority of Yelp reviewers give 4 stars.
+
+NOTEBOOK 2:
+
+You start by saying ‘in order to improve the trendsetter prediction, some feature engineering is required.’ What is the baseline trendsetter prediction that you are trying to improve upon? Up to this point I don’t think you’ve done any modeling, so how do you know feature engineering is required? Also, how do you know that Speed and Quality are the attributes that define a trendsetter? I’m not saying they are not, but I’m just wondering how you came to the decision that those were the features you needed to create.  
+
+Again, I assume the files you used to begin your analysis were too large for git, so I couldn’t run the code.
+
+NOTEBOOK 3:
+
+A description, or even just catchy labels, of your clusters in your code would be helpful. which of these clusters is your “trendsetters?”
+
+FINAL THOUGHTS:
+
+Karissa, overall I think you have a really strong handle on the techniques necessary to perform your analysis. I also think your data visualization is great. However, I think your methodology needs improvement. Your goal seems to be to identify trendsetters, but you apply that label from the outset, without having done any baseline analysis. You also identify speed and quality as important attributes of a trendsetter, but it’s unclear as to why those attributes were chosen instead of others. Intuitively I think you’re right that those attributes are qualities of a trendsetter, but analytically I don’t think you made the case. I would have loved to have seen a baseline cluster analysis or classification analysis to identify a trendsetter, and then feature engineering and more analysis to really hone-in on who the trendsetters are and the qualities that differentiate them from other Yelp reviewers.
+
