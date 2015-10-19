@@ -1,0 +1,3 @@
+We've talked in depth about your unsupervised learning problem, so I'll try to help out a little more on your supervised learning notebook. Looking at your histogram, it seems like there are mainly non-trendsetters, so your dummy model is performing extremely well. Even still, I think that the delta you're getting from random forests is extremely valuable. I would zoom in on that - look at the true positives and false positives and see what's going on in that small percentage of critical users.
+
+I think that's where the supervised model can add a lot of value - the incremental 2 percentage points is still a very important increase for a platform like yelp. 
